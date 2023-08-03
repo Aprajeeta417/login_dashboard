@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Dashboard</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+    <div class="row justify-content-center">
+        <div class = "col-sm-8"></div>
+            <h2>User Dashboard</h2>
+            <p><b>Name: </b>{{ User.name }}</p>
+            <p><b>Email: </b>{{ User.email }}</p>
+            
+             
+            <h2>Filter Data</h2>
+            <!-- Add filter inputs here (e.g., text input, dropdowns) -->
+        
+            <button onclick="filterData()">Apply Filter</button>
+        
+            <h2>Export Data</h2>
+            <button onclick="exportData('csv')">Export as CSV</button>
+            <button onclick="exportData('xls')">Export as XLS</button>
+            <button onclick="exportData('pdf')">Export as PDF</button>
+
+            <script>
+                function filterData() {
+                    // Implement AJAX request to '/filter' route with filter data
+                    // Update the table with the filtered data
+                }
+        
+                function exportData(format) {
+                    // Implement AJAX request to '/export' route with format
+                    // Trigger download of the exported file on the client-side
+                }
+
+                <a href="/templates/login.html" class="btn btn-dark">Logout</a>
+        </div>
+    </div>
+  
+</div>
+
+</body>
+</html>
